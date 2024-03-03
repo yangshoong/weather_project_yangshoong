@@ -1,3 +1,5 @@
+let apikey = "0235571f80ab4a3bbaf3f81020f0c8ac"
+
 let openSearch = document.querySelector(".open_search");
 let header = document.querySelector(".header");
 let noLocation = false;
@@ -72,7 +74,7 @@ searchButton.addEventListener('click', async () => {
 
 // 도시를 검색하면 도시의 위도, 경도를 알려줌
 async function getCoordinates(city) {
-  const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(city)}&limit=1&appid=${config.apikey}`;
+  const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(city)}&limit=1&appid=${apikey}`;
   const response = await fetch(geocodingUrl);
 
   if (!response.ok) {

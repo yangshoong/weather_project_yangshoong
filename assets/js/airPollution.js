@@ -1,3 +1,4 @@
+let apikey = "0235571f80ab4a3bbaf3f81020f0c8ac"
 //대기오염 정보 보여주는 element
 const airPollutionInfoHTML = document.getElementById('air-pollution-info');
 
@@ -49,7 +50,7 @@ async function getAirPollutionInfo(lat, lng) {
 
   //현재 대기오염 정보 불러오는 api
   // 파라미터로 위도, 경도값 필요로함 -> getCoordinates(city)함수로 정보 가져옴
-  const airPollutionUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lng}&appid=${config.apikey}`
+  const airPollutionUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lng}&appid=${apikey}`
   const data = await fetch(airPollutionUrl);
   const airPollutionInfo = await data.json();
   return airPollutionInfo;

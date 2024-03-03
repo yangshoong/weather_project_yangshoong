@@ -1,3 +1,4 @@
+let apikey = "0235571f80ab4a3bbaf3f81020f0c8ac"
 let weatherInfoElement;
 
 weatherInfoElement = document.getElementById('weather-info');
@@ -5,7 +6,7 @@ weatherInfoElement = document.getElementById('weather-info');
 
 
 async function get5DayForecast(lat, lon) {
-  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=en&appid=${config.apikey}`;
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=en&appid=${apikey}`;
   const response = await fetch(forecastUrl);
 
   if (!response.ok) {
