@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨와 축제의 옷장:종합 날씨 웹</title>
+    <!--나눔스퀘어 폰트 cdn-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/style/common.css">
+</head>
+<body>
+<div class="wrap">
+    <header class="header">
+        <button type="button" class="open_search">검색창 열기</button>
+        <div class="input_area">
+            <input type="text" class="search_bar" id="location" placeholder="오늘의 날씨를 알고싶은 지역을 입력해주세요.">
+            <button class="search_btn" id="searchButton">검색</button>
+        </div>
+    </header>
+    <div class="banner" id ="current"> 
+        <!-- 
+            banner클래스는 그대로 유지한 상태로9종류 클래스 추가 변경
+            bg_clear_sky, bg_few_clouds, bg_scattered_clouds, 
+            bg_broken_clouds, bg_shower_rain, bg_rain,
+            bg_thunderstorm, bg_snow, bg_mist
+
+            데이터 없을 시 : no_data 클래스 추가
+        -->
+        <!--현재의 날씨-->
+        <div class="present_weather">
+            <div class="action_space">
+            </div>
+            <div class="action_txt">
+                <!-- 데이터 텍스트 영역 --> 
+                <div class="day_weather" id="bannercurrent"> <!-- 이안에 데이터를 넣으면 됩니다. -->
+                </div>
+                <!-- //데이터 텍스트 영역 -->
+                <div id="air-pollution-info-mobile">
+                    <div class="pollution"> 
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <section class="section">
+            <div class="inner">
+                <h2>대기오염</h2>
+                <div class="air_pollution" id="air-pollution-info">
+                <div class="pollution good">
+                    <span class="status">Good</span>
+                </div>
+                <div class="pollution fair">
+                    <span class="status">Fair</span>
+                </div>
+                <div class="pollution moderate">
+                    <span class="status">Moderate</span>
+                </div>
+                <div class="pollution poor">
+                    <span class="status">Poor</span>
+                </div>
+                <div class="pollution very_poor">
+                    <span class="status">Very Poor</span>
+                </div>
+                </div>
+            </div>
+            <div class="inner">
+                <h2>5일 날씨</h2>
+                <div class="weather_list">
+                <ul id="weather-info">
+                </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="inner">
+                <h2>옷차림 추천</h2>
+                <div class="clothes" id="clothes">
+                </div>
+            </div>
+        </section>
+        <section class="section m_pull">
+            <div class="inner">
+                <h2>축제</h2>
+                <div class="swiper festival">
+                    <ul id="festivial_list" class="swiper-wrapper">
+                    </ul>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer>
+        <div class="inner">
+            <p>Product Owner 이아리 |  Surum Master 박샘 | Developer 오승택, 김범준, 김예빈</p>
+            <ul>
+                <li>macrovector / pikisuperstar  출처 Freepik</li>
+            </ul>
+        </div>
+    </footer>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/api_key.js"></script>
+<script src="/assets/js/index.js"></script>
+<script src="/assets/js/styling.js"></script>
+<script src="/assets/js/festival.js"></script>
+<script src="/assets/js/call5day.js"></script>
+<script src="/assets/js/airPollution.js"></script>
+</body>
+</html>
